@@ -1,8 +1,7 @@
 # slicesx
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/pkierski/slicesx.svg)](https://pkg.go.dev/github.com/pkierski/slicesx)
-[![rcard](https://goreportcard.com/badge/github.com/pkierski/slicesx)](https://goreportcard.com/report/github.com/pkierski/slicesx)
-
+[![Go Report Card](https://goreportcard.com/badge/github.com/pkierski/slicesx)](https://goreportcard.com/report/github.com/pkierski/slicesx)
 This package is an enhancement for the standard [slices](https://pkg.go.dev/slices) Go package.
 
 This is a set of generic functions I missed in `slices`:
