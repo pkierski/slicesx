@@ -2,12 +2,10 @@ package slicesx
 
 import (
 	"cmp"
-
-	"golang.org/x/exp/constraints"
 )
 
 // MinIndex returns the index of the minimum element in the slice.
-func MinIndex[S ~[]E, E constraints.Ordered](s S) int {
+func MinIndex[S ~[]E, E cmp.Ordered](s S) int {
 	return MinIndexFunc(s, cmp.Compare)
 }
 
@@ -26,7 +24,7 @@ func MinIndexFunc[S ~[]E, E any](s S, cmp func(E, E) int) int {
 }
 
 // MaxIndex returns the index of the maximum element in the slice.
-func MaxIndex[S ~[]E, E constraints.Ordered](s S) int {
+func MaxIndex[S ~[]E, E cmp.Ordered](s S) int {
 	return MaxIndexFunc(s, cmp.Compare)
 }
 
@@ -45,7 +43,7 @@ func MaxIndexFunc[S ~[]E, E any](s S, cmp func(E, E) int) int {
 }
 
 // MinMaxIndex returns the indices of the minimum and maximum elements in the slice.
-func MinMaxIndex[S ~[]E, E constraints.Ordered](s S) (int, int) {
+func MinMaxIndex[S ~[]E, E cmp.Ordered](s S) (int, int) {
 	return MinMaxIndexFunc(s, cmp.Compare)
 }
 
