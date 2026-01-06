@@ -23,6 +23,12 @@ func PartitionInPlace[S ~[]E, E any](s S, predicate func(E) bool) (S, S) {
 		}
 	}
 
+	// Handle the case where the element at position left matches the predicate
+	// (this happens when all elements match, or when left == right and it matches)
+	if left < len(s) && predicate(s[left]) {
+		left++
+	}
+
 	return s[:left], s[left:]
 }
 
